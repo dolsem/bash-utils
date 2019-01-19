@@ -17,3 +17,4 @@ magenta() { tput setaf 5; cat; tput sgr0; }
 cyan() { tput setaf 6; cat; tput sgr0; }
 white() { tput setaf 7; cat; tput sgr0; }
 dim() { tput dim; cat; tput sgr0; }
+reset_color() { tput sgr0; }

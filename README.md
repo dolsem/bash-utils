@@ -20,6 +20,7 @@ Collection of useful functions that can be used in scripts.
   - **strip_whitespace**
 - **term**
   - *output colors*
+  - **reset_color**
 - **validation**
   - **is_valid_ip**
 
