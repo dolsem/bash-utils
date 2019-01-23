@@ -4,6 +4,7 @@
 Collection of useful functions that can be used in scripts.
 ## Overview
 #### Below is an overview of the available modules.
+- **assert**
 - **filesystem**
   - **abspath**
 - **network**
