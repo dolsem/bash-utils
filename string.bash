@@ -13,7 +13,7 @@
 export DOLSEM_SHELL_COLLECTION_HELPERS_STRING=true
 
 if [[ $DOLSEM_SHELL_COLLECTION_HELPERS_OS != true ]]; then
-  source $(dirname ${BASH_SOURCE[0]})/os.bash
+  source $(dirname $0)/os.bash
 fi
 
 strip_whitespace() {
@@ -23,4 +23,8 @@ strip_whitespace() {
   else
     echo $1 | grep -oP $regexp
   fi
+}
+
+escape_fslash() {
+  sed 's_/_\\/_g' <<< $1
 }

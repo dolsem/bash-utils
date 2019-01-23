@@ -18,6 +18,7 @@ Collection of useful functions that can be used in scripts.
   - **prompt_for_multiselect**
 - **string**
   - **strip_whitespace**
+  - **escape_fslash**
 - **term**
   - *output colors*
   - **reset_color**
