@@ -2,6 +2,18 @@
 [![License: MIT][license-image]][license-url]
 
 Collection of useful functions that can be used in scripts.
+## Usage
+You can use it directly in your script without storing local copies, for example:
+```bash
+source_remote() { source <(curl -fsSL github.com/dolsem/bash-utils/raw/master/$1.bash || echo "echo 'Cannot download $1'") }
+source_remote term
+```
+Or, if you would like to cache modules to run the script again:
+```bash
+source_util() { source ".bash-utils/$1.bash" 2>/dev/null || util=$1 source <(curl -fsSL https://github.com/dolsem/shell-collection/raw/master/source_utils.bash') 1>&2; }
+source_util term
+```
+
 ## Overview
 #### Below is an overview of the available modules.
 - **assert**
