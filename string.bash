@@ -10,11 +10,10 @@
 # Copyright (c) 2019 Denis Semenenko
 ###########################################################################
 
-export DOLSEM_SHELL_COLLECTION_HELPERS_STRING=true
+if [[ $DOLSEM_SHELL_COLLECTION_HELPERS_STRING == true ]]; then return; fi
+DOLSEM_SHELL_COLLECTION_HELPERS_STRING=true
 
-if [[ $DOLSEM_SHELL_COLLECTION_HELPERS_OS != true ]]; then
-  source $(dirname $0)/os.bash
-fi
+source $(dirname $0)/os.bash
 
 strip_whitespace() {
   regexp="((\S+\s+)*\S+)"

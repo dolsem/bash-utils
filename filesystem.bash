@@ -9,7 +9,8 @@
 # Copyright (c) 2019 Denis Semenenko
 ###########################################################################
 
-export DOLSEM_SHELL_COLLECTION_HELPERS_FILESYSTEM=true
+if [[ $DOLSEM_SHELL_COLLECTION_HELPERS_FILESYSTEM == true ]]; then return; fi
+DOLSEM_SHELL_COLLECTION_HELPERS_FILESYSTEM=true
 
 abspath() {
   echo "$(cd "$(dirname "$1")" && pwd)/$(basename "$1")"

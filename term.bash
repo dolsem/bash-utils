@@ -9,6 +9,9 @@
 # Copyright (c) 2019 Denis Semenenko
 ###########################################################################
 
+if [[ $DOLSEM_SHELL_COLLECTION_HELPERS_TERM == true ]]; then return; fi
+DOLSEM_SHELL_COLLECTION_HELPERS_TERM=true
+
 red() { tput setaf 1; cat; tput sgr0; }
 green() { tput setaf 2; cat; tput sgr0; }
 yellow() { tput setaf 3; cat; tput sgr0; }

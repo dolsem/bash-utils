@@ -9,6 +9,9 @@
 # Copyright (c) 2019 Denis Semenenko
 ###########################################################################
 
+if [[ $DOLSEM_SHELL_COLLECTION_HELPERS_PROMPT == true ]]; then return; fi
+DOLSEM_SHELL_COLLECTION_HELPERS_PROMPT=true
+
 #------< Helpers >------#
 ESC=$( printf "\033")
 

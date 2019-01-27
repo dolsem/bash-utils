@@ -9,7 +9,8 @@
 # Copyright (c) 2019 Denis Semenenko
 ###########################################################################
 
-export DOLSEM_SHELL_COLLECTION_HELPERS_VALIDATION=true
+if [[ $DOLSEM_SHELL_COLLECTION_HELPERS_VALIDATION == true ]]; then return; fi
+DOLSEM_SHELL_COLLECTION_HELPERS_VALIDATION=true
 
 is_valid_ip() {
   regexp='^(0*(1?[0-9]{1,2}|2([0-4][0-9]|5[0-5]))\.){3}0*(1?[0-9]{1,2}|2([‌​0-4][0-9]|5[0-5]))$'

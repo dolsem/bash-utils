@@ -10,7 +10,8 @@
 # Copyright (c) 2019 Denis Semenenko
 ###########################################################################
 
-export DOLSEM_SHELL_COLLECTION_HELPERS_NETWORK=true
+if [[ $DOLSEM_SHELL_COLLECTION_HELPERS_NETWORK == true ]]; then return; fi
+DOLSEM_SHELL_COLLECTION_HELPERS_NETWORK=true
 
 if [[ $DOLSEM_SHELL_COLLECTION_HELPERS_OS != true ]]; then
   source $(dirname ${BASH_SOURCE[0]})/os.bash

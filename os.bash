@@ -9,7 +9,8 @@
 # Copyright (c) 2019 Denis Semenenko
 ###########################################################################
 
-export DOLSEM_SHELL_COLLECTION_HELPERS_OS=true
+if [[ $DOLSEM_SHELL_COLLECTION_HELPERS_OS == true ]]; then return; fi
+DOLSEM_SHELL_COLLECTION_HELPERS_OS=true
 
 is_macos() {
   [[ "$(uname)" == "Darwin" ]]
