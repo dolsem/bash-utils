@@ -38,5 +38,29 @@ source_util term
 - **validation**
   - **is_valid_ip**
 
+## Shell compatibility
+| Module                | Bash               | Zsh                |
+|-----------------------|--------------------|--------------------|
+| assert.bash           | :heavy_check_mark: | :heavy_check_mark: |
+| filesystem.bash       | :heavy_check_mark: | :heavy_check_mark: |
+| network.bash          | :heavy_check_mark: | :heavy_check_mark: |
+| os.bash               | :heavy_check_mark: | :heavy_check_mark: |
+| prompt.bash           | :heavy_check_mark: | :heavy_check_mark: |
+| string.bash           | :heavy_check_mark: | :heavy_check_mark: |
+| term.bash             | :heavy_check_mark: | :heavy_check_mark: |
+| validation.bash       | :heavy_check_mark: | :heavy_check_mark: |
+
+## OS compatibility
+| Module                | Linux              | Mac OS             |
+|-----------------------|--------------------|--------------------|
+| assert.bash           | :heavy_check_mark: | :heavy_check_mark: |
+| filesystem.bash       | :heavy_check_mark: | :heavy_check_mark: |
+| network.bash          | :heavy_check_mark: | :heavy_check_mark: |
+| os.bash               | :heavy_check_mark: | :heavy_check_mark: |
+| prompt.bash           | :heavy_check_mark: | :grey_question:    |
+| string.bash           | :heavy_check_mark: | :grey_question:    |
+| term.bash             | :heavy_check_mark: | :grey_question:    |
+| validation.bash       | :heavy_check_mark: | :grey_question:    |
+
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-url]: https://opensource.org/licenses/MIT

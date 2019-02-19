@@ -13,7 +13,7 @@
 if [[ $DOLSEM_SHELL_COLLECTION_HELPERS_STRING == true ]]; then return; fi
 DOLSEM_SHELL_COLLECTION_HELPERS_STRING=true
 
-source $(dirname $0)/os.bash
+source $(dirname ${BASH_SOURCE[0]:-${(%):-%x}})/os.bash
 
 strip_whitespace() {
   regexp="((\S+\s+)*\S+)"
