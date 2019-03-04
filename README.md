@@ -32,6 +32,7 @@ source_util term
 - **string**
   - **strip_whitespace**
   - **escape_fslash**
+  - **grep_app_version**
 - **term**
   - *output colors*
   - **reset_color**

@@ -27,3 +27,13 @@ strip_whitespace() {
 escape_fslash() {
   sed 's_/_\\/_g' <<< $1
 }
+
+grep_app_version() {
+  regexp1='(?!^0\.0\.0)(^((0|[1-9][0-9]*)\.)((0|[1-9][0-9]*)\.)(0|[1-9][0-9]*)([ab]([1-9][0-9]*)?)?\b)'
+  regexp2='([0-9]+\.[0-9]+\.[0-9]+)'
+  if is_macos; then
+    echo $1 | perl -nle"if (m{$regexp1}g) { print \$1; }" | perl -nle"if (m/$regexp2/) { print \$1; }"
+  else
+    echo $1 | grep -oP $regexp1 | grep -oP $regexp2
+  fi
+}
