@@ -23,6 +23,7 @@ source_util term
   - **get_ip**
 - **os**
   - **is_macos**
+  - **install_pkg**
 - **prompt**
   - **prompt_with_default**
   - **prompt_for_bool**
