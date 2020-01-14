@@ -13,6 +13,7 @@ Or, if you would like to cache modules to run the script again:
 source_util() { source ".bash-utils/$1.bash" 2>/dev/null || util=$1 source <(curl -fsSL https://github.com/dolsem/shell-collection/raw/master/source_utils.bash') 1>&2; }
 source_util term
 ```
+Note that if you're using an old version of Bash, you need to replace `source <(..)>` with `source /dev/stdin <<<"$(...)"`
 
 ## Overview
 #### Below is an overview of the available modules.
