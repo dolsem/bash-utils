@@ -14,6 +14,7 @@ DOLSEM_SHELL_COLLECTION_HELPERS_PROMPT=true
 
 source $(dirname ${BASH_SOURCE[0]:-${(%):-%x}})/filesystem.bash
 source $(dirname ${BASH_SOURCE[0]:-${(%):-%x}})/assert.bash
+source $(dirname ${BASH_SOURCE[0]:-${(%):-%x}})/process.bash
 
 if [[ -n $ZSH_VERSION ]]; then
   setopt shwordsplit
@@ -51,6 +52,26 @@ read_key()          {
 }
 
 #------< Prompt functions >------#
+
+#~= Function Name
+# prompt_for_enter
+#~= Description
+# Wait for user to press Enter
+#~= Arguments
+# [$@] - prompt string to print
+prompt_for_enter() {
+  if [[ -n $1 ]]; then printf "$@"; fi
+
+  local tty_settings=$(stty -g)
+  local pop_trap
+  push_trap "stty '$tty_settings'" INT pop_trap
+
+  stty -echo
+  until [[ `read_key` == enter ]]; do :; done
+  stty "$tty_settings"
+
+  eval $pop_trap
+}
 
 #~= Function Name
 # prompt_with_default

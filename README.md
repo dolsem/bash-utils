@@ -25,7 +25,10 @@ Note that if you're using an old version of Bash, you need to replace `source <(
 - **os**
   - **is_macos**
   - **install_pkg**
+- **process**
+  - **push_trap**
 - **prompt**
+  - **prompt_for_enter**
   - **prompt_with_default**
   - **prompt_for_bool**
   - **prompt_for_file**
@@ -48,6 +51,7 @@ Note that if you're using an old version of Bash, you need to replace `source <(
 | filesystem.bash       | :heavy_check_mark: | :heavy_check_mark: |
 | network.bash          | :heavy_check_mark: | :heavy_check_mark: |
 | os.bash               | :heavy_check_mark: | :heavy_check_mark: |
+| process.bash          | :heavy_check_mark: | :grey_question:    |
 | prompt.bash           | :heavy_check_mark: | :heavy_check_mark: |
 | string.bash           | :heavy_check_mark: | :heavy_check_mark: |
 | term.bash             | :heavy_check_mark: | :heavy_check_mark: |
@@ -60,6 +64,7 @@ Note that if you're using an old version of Bash, you need to replace `source <(
 | filesystem.bash       | :heavy_check_mark: | :heavy_check_mark: |
 | network.bash          | :heavy_check_mark: | :heavy_check_mark: |
 | os.bash               | :heavy_check_mark: | :heavy_check_mark: |
+| process.bash          | :heavy_check_mark: | :heavy_check_mark: |
 | prompt.bash           | :heavy_check_mark: | :grey_question:    |
 | string.bash           | :heavy_check_mark: | :grey_question:    |
 | term.bash             | :heavy_check_mark: | :grey_question:    |
